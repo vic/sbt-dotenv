@@ -42,7 +42,8 @@ class SbtDotenvSpec extends WordSpec with Matchers {
       SbtDotenv.parseFile(file) should equal(Some(Map(
         "MONGO_PORT" -> "17017",
         "COVERALLS_REPO_TOKEN" -> "aoeucaPDc2rvkFugUGlNaCGu3EOeoaeu63WLo5",
-        "MONGO_URL" -> "http://localhost:$MONGO_PORT/mongo#asdf"
+        "MONGO_URL" -> "http://localhost:$MONGO_PORT/mongo#asdf",
+        "AKKA_CLUSTER_SEEDS.0" -> "akka://cluster@127.0.0.1:2551"
       )))
     }
 
